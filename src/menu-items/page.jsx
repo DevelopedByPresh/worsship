@@ -17,65 +17,65 @@ const pages = {
 
     
     
-    {
-      id: 'Team-Streams',
-      title: 'All Streams',
-      type: 'item',
-      url: '/login',
-      icon: icons.LoginOutlined,
-      target: true
-    },
-    {
-      id: 'Events',
-      title: 'Events',
-      type: 'item',
-      url: '/register',
-      icon: icons.ProfileOutlined,
-      target: true
-    },
+    // {
+    //   id: 'Team-Streams',
+    //   title: 'All Streams',
+    //   type: 'item',
+    //   url: 'dashboard/AllStreams',
+    //   icon: icons.LoginOutlined,
+    //   target: true
+    // },
+    // {
+    //   id: 'Events',
+    //   title: 'Events',
+    //   type: 'item',
+    //   url: '#',
+    //   icon: icons.ProfileOutlined,
+    //   target: true
+    // },
 
 
-     {
-      id: 'Donations',
-      title: 'Donations',
-      type: 'item',
-      url: '/register',
-      icon: icons.ProfileOutlined,
-      target: true
-    },
-
-
-
-      {
-      id: 'Bible Study',
-      title: 'Bible Study',
-      type: 'item',
-      url: '/register',
-      icon: icons.ProfileOutlined,
-      target: true
-    },
+    //  {
+    //   id: 'Donations',
+    //   title: 'Donations',
+    //   type: 'item',
+    //   url: '#',
+    //   icon: icons.ProfileOutlined,
+    //   target: true
+    // },
 
 
 
-        {
-      id: 'Community',
-      title: 'Community',
-      type: 'item',
-      url: '/register',
-      icon: icons.ProfileOutlined,
-      target: true
-    },
+    //   {
+    //   id: 'Bible Study',
+    //   title: 'Bible Study',
+    //   type: 'item',
+    //   url: '#',
+    //   icon: icons.ProfileOutlined,
+    //   target: true
+    // },
 
 
 
-        {
-      id: 'Requests',
-      title: 'Requests',
-      type: 'item',
-      url: '/register',
-      icon: icons.ProfileOutlined,
-      target: true
-    },
+    //     {
+    //   id: 'Community',
+    //   title: 'Community',
+    //   type: 'item',
+    //   url: '#',
+    //   icon: icons.ProfileOutlined,
+    //   target: true
+    // },
+
+
+
+    //     {
+    //   id: 'Requests',
+    //   title: 'Requests',
+    //   type: 'item',
+    //   url: '#',
+    //   icon: icons.ProfileOutlined,
+    //   target: true
+    // },
 
 
 

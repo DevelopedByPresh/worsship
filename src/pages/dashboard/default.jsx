@@ -38,6 +38,12 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import MarkUnreadChatAltIcon from '@mui/icons-material/MarkUnreadChatAlt';
 import image from "./avatar.png"
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import LiveHelpIcon from '@mui/icons-material/LiveHelp';
+
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+import MessageIcon from '@mui/icons-material/Message';
+import QuizIcon from '@mui/icons-material/Quiz';
 
 
 
@@ -70,7 +76,7 @@ export default function DashboardDefault() {
 
         useEffect(() => {
       
-        document.body.style.zoom = '47%'; 
+        document.body.style.zoom = '44%'; 
 
       }, [])
 
@@ -262,6 +268,9 @@ export default function DashboardDefault() {
         </MainCard>
       </Grid>
       {/* row 3 */}
+
+      
+      
       <Grid size={{ xs: 12, md: 7, lg: 8 }}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid>
@@ -269,47 +278,28 @@ export default function DashboardDefault() {
           </Grid>
           <Grid />
         </Grid>
-        <MainCard sx={{ mt: 2 }} content={false}>
+        <MainCard sx={{ mt: -10 }} content={false}>
           <OrdersTable />
         </MainCard>
       </Grid>
-      <Grid size={{ xs: 12, md: 5, lg: 4 }}>
+
+
+
+        <Grid size={{ xs: 12, md: 5, lg: 4 }}>
         <Grid container alignItems="center" justifyContent="space-between">
-          <Grid>
-            <Typography variant="h5">Analytics Report</Typography>
-          </Grid>
-          <Grid />
-        </Grid>
-        <MainCard sx={{ mt: 2 }} content={false}>
-          <List sx={{ p: 0, '& .MuiListItemButton-root': { py: 2 } }}>
-            <ListItemButton divider>
-              <ListItemText primary="Company Finance Growth" />
-              <Typography variant="h5">+45.14%</Typography>
-            </ListItemButton>
-            <ListItemButton divider>
-              <ListItemText primary="Company Expenses Ratio" />
-              <Typography variant="h5">0.58%</Typography>
-            </ListItemButton>
-            <ListItemButton>
-              <ListItemText primary="Business Risk Cases" />
-              <Typography variant="h5">Low</Typography>
-            </ListItemButton>
-          </List>
-          <ReportAreaChart />
-        </MainCard>
-      </Grid>
-      {/* row 4 */}
-      <Grid size={{ xs: 12, md: 7, lg: 8 }}>
-        <SaleReportCard />
-      </Grid>
-      <Grid size={{ xs: 12, md: 5, lg: 4 }}>
-        <Grid container alignItems="center" justifyContent="space-between">
-          <Grid>
+          {/* <Grid>
             <Typography variant="h5">Transaction History</Typography>
-          </Grid>
+          </Grid> */}
           <Grid />
         </Grid>
         <MainCard sx={{ mt: 2 }} content={false}>
+
+          <Stack style={{flexDirection:'row', justifyContent:'space-between', padding:"15px 20px"}}>
+              <Typography variant='h3' color="black">Notification</Typography>
+              <Typography variant='h4' color='#2B04DB'>View All</Typography>
+
+          </Stack>
+        
           <List
             component="nav"
             sx={{
@@ -325,69 +315,111 @@ export default function DashboardDefault() {
           >
             <ListItem
               component={ListItemButton}
-              divider
+            //  divider
               secondaryAction={
                 <Stack sx={{ alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1" noWrap>
-                    + $1,430
+                    <ArrowForwardIosIcon style={{width:30,height:30}}/>
                   </Typography>
-                  <Typography variant="h6" color="secondary" noWrap>
-                    78%
-                  </Typography>
+                 
                 </Stack>
               }
             >
               <ListItemAvatar>
-                <Avatar sx={{ color: 'success.main', bgcolor: 'success.lighter' }}>
-                  <GiftOutlined />
-                </Avatar>
+                     <Stack sx={{ gap: 0.5, color: '#FE8B6E', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#FFF1F1',  }}>
+                  <QuizIcon  sx={{ width: 40, height: 40 }}  />
+                </Stack>
+             
               </ListItemAvatar>
-              <ListItemText primary={<Typography variant="subtitle1">Order #002434</Typography>} secondary="Today, 2:00 AM" />
+              <ListItemText sx={{ml:2}} primary={<Typography variant="h4" >15 New MVPs</Typography>} secondary="View MVPs" />
             </ListItem>
-            <ListItem
+
+
+
+
+
+             <ListItem
               component={ListItemButton}
-              divider
+            //  divider
               secondaryAction={
                 <Stack sx={{ alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1" noWrap>
-                    + $302
+                    <ArrowForwardIosIcon style={{width:30,height:30}}/>
                   </Typography>
-                  <Typography variant="h6" color="secondary" noWrap>
-                    8%
-                  </Typography>
+                 
                 </Stack>
               }
             >
               <ListItemAvatar>
-                <Avatar sx={{ color: 'primary.main', bgcolor: 'primary.lighter' }}>
-                  <MessageOutlined />
-                </Avatar>
+                     <Stack sx={{ gap: 0.5, color: '#2B04DB', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#F1F2FF',  }}>
+                  <VolunteerActivismIcon  sx={{ width: 40, height: 40 }}  />
+                </Stack>
+             
               </ListItemAvatar>
-              <ListItemText primary={<Typography variant="subtitle1">Order #984947</Typography>} secondary="5 August, 1:45 PM" />
+              <ListItemText sx={{ml:2}} primary={<Typography variant="h4" >6 New Donations</Typography>} secondary="View Donations" />
             </ListItem>
-            <ListItem
+
+
+
+
+
+
+
+             <ListItem
               component={ListItemButton}
+            //  divider
               secondaryAction={
                 <Stack sx={{ alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1" noWrap>
-                    + $682
+                    <ArrowForwardIosIcon style={{width:30,height:30}}/>
                   </Typography>
-                  <Typography variant="h6" color="secondary" noWrap>
-                    16%
-                  </Typography>
+                 
                 </Stack>
               }
             >
               <ListItemAvatar>
-                <Avatar sx={{ color: 'error.main', bgcolor: 'error.lighter' }}>
-                  <SettingOutlined />
-                </Avatar>
+                     <Stack sx={{ gap: 0.5, color: '#CC6002', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#FFF9EB',  }}>
+                  <MessageIcon  sx={{ width: 40, height: 40 }}  />
+                </Stack>
+             
               </ListItemAvatar>
-              <ListItemText primary={<Typography variant="subtitle1">Order #988784</Typography>} secondary="7 hours ago" />
+              <ListItemText sx={{ml:2}} primary={<Typography variant="h4" >4 New Request</Typography>} secondary="View Request" />
             </ListItem>
+
+
+
+
+             <ListItem
+              component={ListItemButton}
+            //  divider
+              secondaryAction={
+                <Stack sx={{ alignItems: 'flex-end' }}>
+                  <Typography variant="subtitle1" noWrap>
+                    <ArrowForwardIosIcon style={{width:30,height:30}}/>
+                  </Typography>
+                 
+                </Stack>
+              }
+            >
+              <ListItemAvatar>
+                     <Stack sx={{ gap: 0.5, color: '#5EC4B3', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#F2FBF9',  }}>
+                  <MessageIcon  sx={{ width: 40, height: 40 }}  />
+                </Stack>
+             
+              </ListItemAvatar>
+              <ListItemText sx={{ml:2}} primary={<Typography variant="h4" >2 Counselling Schedule</Typography>} secondary="View Schedule" />
+            </ListItem>
+
+
+          
+
+           
+
+
           </List>
         </MainCard>
-        <MainCard sx={{ mt: 2 }}>
+
+        {/* <MainCard sx={{ mt: 2 }}>
           <Stack sx={{ gap: 3 }}>
             <Grid container justifyContent="space-between" alignItems="center">
               <Grid>
@@ -413,8 +445,143 @@ export default function DashboardDefault() {
               Need Help?
             </Button>
           </Stack>
+        </MainCard> */}
+      </Grid>
+
+
+
+    
+      {/* row 4 */}
+
+      
+
+
+        <Grid size={{ xs: 12, md: 3.5, lg: 4 }}>
+        <Grid container alignItems="center" justifyContent="space-between">
+          {/* <Grid>
+            <Typography variant="h5">Analytics Report</Typography>
+          </Grid> */}
+          <Grid />
+        </Grid>
+
+        <MainCard sx={{ mt: 2 }} content={false}>
+          <List sx={{ p: 0, '& .MuiListItemButton-root': { py: 2 } }}>
+            <ListItemButton divider>
+              <ListItemText primary="Company Finance Growth" />
+              <Typography variant="h5">+45.14%</Typography>
+            </ListItemButton>
+            <ListItemButton divider>
+              <ListItemText primary="Company Expenses Ratio" />
+              <Typography variant="h5">0.58%</Typography>
+            </ListItemButton>
+            <ListItemButton>
+              <ListItemText primary="Business Risk Cases" />
+              <Typography variant="h5">Low</Typography>
+            </ListItemButton>
+          </List>
+          <ReportAreaChart />
         </MainCard>
       </Grid>
+
+
+        <Grid size={{ xs: 12, md: 3.5, lg: 4 }}>
+        <Grid container alignItems="center" justifyContent="space-between">
+          {/* <Grid>
+            <Typography variant="h5">Analytics Report</Typography>
+          </Grid> */}
+          <Grid />
+        </Grid>
+        
+        <MainCard sx={{ mt: 2 }} content={false}>
+          <List sx={{ p: 0, '& .MuiListItemButton-root': { py: 2 } }}>
+            <ListItemButton divider>
+              <ListItemText primary="Company Finance Growth" />
+              <Typography variant="h5">+45.14%</Typography>
+            </ListItemButton>
+            <ListItemButton divider>
+              <ListItemText primary="Company Expenses Ratio" />
+              <Typography variant="h5">0.58%</Typography>
+            </ListItemButton>
+            <ListItemButton>
+              <ListItemText primary="Business Risk Cases" />
+              <Typography variant="h5">Low</Typography>
+            </ListItemButton>
+          </List>
+          <ReportAreaChart />
+        </MainCard>
+      </Grid>
+
+
+
+
+      <Grid size={{ xs: 12, md: 5, lg: 4 }}>
+        <SaleReportCard />
+      </Grid>
+
+{/* 
+<Stack style={{flexDirection:'row', justifyContent:'center', gap:10}}>
+
+
+
+        <Grid size={{ xs: 12, md: 5, lg: 4 }}>
+        <Grid container alignItems="center" justifyContent="space-between">
+          <Grid>
+            <Typography variant="h5">Analytics Report</Typography>
+          </Grid>
+          <Grid />
+        </Grid>
+
+        <MainCard sx={{ mt: 2 }} content={false}>
+          <List sx={{ p: 0, '& .MuiListItemButton-root': { py: 2 } }}>
+            <ListItemButton divider>
+              <ListItemText primary="Company Finance Growth" />
+              <Typography variant="h5">+45.14%</Typography>
+            </ListItemButton>
+            <ListItemButton divider>
+              <ListItemText primary="Company Expenses Ratio" />
+              <Typography variant="h5">0.58%</Typography>
+            </ListItemButton>
+            <ListItemButton>
+              <ListItemText primary="Business Risk Cases" />
+              <Typography variant="h5">Low</Typography>
+            </ListItemButton>
+          </List>
+          <ReportAreaChart />
+        </MainCard>
+      </Grid>
+
+
+        <Grid size={{ xs: 12, md: 5, lg: 4 }}>
+        <Grid container alignItems="center" justifyContent="space-between">
+          <Grid>
+            <Typography variant="h5">Analytics Report</Typography>
+          </Grid>
+          <Grid />
+        </Grid>
+        
+        <MainCard sx={{ mt: 2 }} content={false}>
+          <List sx={{ p: 0, '& .MuiListItemButton-root': { py: 2 } }}>
+            <ListItemButton divider>
+              <ListItemText primary="Company Finance Growth" />
+              <Typography variant="h5">+45.14%</Typography>
+            </ListItemButton>
+            <ListItemButton divider>
+              <ListItemText primary="Company Expenses Ratio" />
+              <Typography variant="h5">0.58%</Typography>
+            </ListItemButton>
+            <ListItemButton>
+              <ListItemText primary="Business Risk Cases" />
+              <Typography variant="h5">Low</Typography>
+            </ListItemButton>
+          </List>
+          <ReportAreaChart />
+        </MainCard>
+      </Grid>
+
+      </Stack> */}
+
+   
+
     </Grid>
   );
 }

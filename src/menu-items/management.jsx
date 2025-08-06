@@ -18,43 +18,43 @@ const icons = {
   AppstoreAddOutlined
 };
 
-// ==============================|| MENU ITEMS - UTILITIES ||============================== //
 
-const utilities = {
-  id: 'Management',
-  title: 'Management',
+
+const Managemnt = {
+  id: 'Managemnt',
+  title: 'Managemnt',
   type: 'group',
   children: [
     {
       id: 'Team-Members',
       title: 'Team Members',
       type: 'item',
-      url: '/typography',
+      url: 'dashboard/TeamMember',
       icon: icons.FontSizeOutlined
     },
     {
       id: 'Church-Settings',
       title: 'Church Settings',
       type: 'item',
-      url: '/color',
+      url: 'dashboard/ChurchSettings',
       icon: icons.BgColorsOutlined
     },
     {
       id: 'Verification',
       title: 'Verification',
       type: 'item',
-      url: '/shadow',
+      url: 'dashboard/Verification',
       icon: icons.BarcodeOutlined
      },
 
-    //    {
-    //   id: 'Setting',
-    //   title: 'Setting',
-    //   type: 'item',
-    //   url: '/color',
-    //   icon: icons.BgColorsOutlined
-    // },
+       {
+      id: 'Setting',
+      title: 'Setting',
+      type: 'item',
+      url: 'dashboard/Settings',
+      icon: icons.BgColorsOutlined
+    },
   ]
 };
 
-export default utilities;
+export default Managemnt;

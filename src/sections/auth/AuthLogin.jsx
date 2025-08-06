@@ -15,6 +15,10 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
+import vector from "./Vector.png"
+
+import AppleIcon from '@mui/icons-material/Apple';
+
 // third-party
 import * as Yup from 'yup';
 import { Formik } from 'formik';
@@ -43,56 +47,32 @@ export default function AuthLogin({ isDemo = false }) {
 
   return (
     <>
-      <Formik
-        initialValues={{
-          email: 'info@codedthemes.com',
-          password: '123456',
-          submit: null
-        }}
-        validationSchema={Yup.object().shape({
-          email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
-          password: Yup.string()
-            .required('Password is required')
-            .test('no-leading-trailing-whitespace', 'Password cannot start or end with spaces', (value) => value === value.trim())
-            .max(10, 'Password must be less than 10 characters')
-        })}
-      >
-        {({ errors, handleBlur, handleChange, touched, values }) => (
-          <form noValidate>
+      <Formik>
+      
+          <form >
             <Grid container spacing={3}>
               <Grid size={12}>
                 <Stack sx={{ gap: 1 }}>
-                  <InputLabel htmlFor="email-login">Email Address</InputLabel>
+                  <InputLabel htmlFor="email-login" style={{fontSize:10}}>Email Address</InputLabel>
                   <OutlinedInput
                     id="email-login"
                     type="email"
-                    value={values.email}
                     name="email"
-                    onBlur={handleBlur}
-                    onChange={handleChange}
-                    placeholder="Enter email address"
+                  
+                    placeholder="Enter your Email Address"
                     fullWidth
-                    error={Boolean(touched.email && errors.email)}
                   />
                 </Stack>
-                {touched.email && errors.email && (
-                  <FormHelperText error id="standard-weight-helper-text-email-login">
-                    {errors.email}
-                  </FormHelperText>
-                )}
+              
               </Grid>
               <Grid size={12}>
                 <Stack sx={{ gap: 1 }}>
-                  <InputLabel htmlFor="password-login">Password</InputLabel>
+                  <InputLabel htmlFor="password-login" style={{fontSize:10}}>Password</InputLabel>
                   <OutlinedInput
                     fullWidth
-                    error={Boolean(touched.password && errors.password)}
                     id="-password-login"
                     type={showPassword ? 'text' : 'password'}
-                    value={values.password}
                     name="password"
-                    onBlur={handleBlur}
-                    onChange={handleChange}
                     endAdornment={
                       <InputAdornment position="end">
                         <IconButton
@@ -106,16 +86,13 @@ export default function AuthLogin({ isDemo = false }) {
                         </IconButton>
                       </InputAdornment>
                     }
-                    placeholder="Enter password"
+                    placeholder="Enter your Password"
                   />
                 </Stack>
-                {touched.password && errors.password && (
-                  <FormHelperText error id="standard-weight-helper-text-password-login">
-                    {errors.password}
-                  </FormHelperText>
-                )}
+               
               </Grid>
               <Grid sx={{ mt: -1 }} size={12}>
+
                 <Stack direction="row" sx={{ gap: 2, alignItems: 'baseline', justifyContent: 'space-between' }}>
                   <FormControlLabel
                     control={
@@ -127,23 +104,47 @@ export default function AuthLogin({ isDemo = false }) {
                         size="small"
                       />
                     }
-                    label={<Typography variant="h6">Keep me sign in</Typography>}
+                    label={<Typography variant="h6">Remember me </Typography>}
                   />
-                  <Link variant="h6" component={RouterLink} to="#" color="text.primary">
+                  <Link variant="h6" style={{cursor:'pointer'}} color="#2B04DB">
                     Forgot Password?
                   </Link>
                 </Stack>
+
               </Grid>
-              <Grid size={12}>
-                <AnimateButton>
-                  <Button fullWidth size="large" variant="contained" color="primary">
-                    Login
-                  </Button>
-                </AnimateButton>
-              </Grid>
+
+
+
+
+
+
+                <Grid size={12}>
+                              <AnimateButton>
+                                <Button fullWidth size="large" variant="contained"  style={{backgroundColor:'#2B04DB', borderRadius:'30px'}}>
+                                  Log in
+                                </Button>
+                              </AnimateButton>
+                                  <Stack sx={{ mt:2,alignItems: 'baseline', alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
+              
+                                <Typography variant='h6' color='#7D7F81' >or</Typography>
+                                </Stack>  
+              
+                                  <Stack style={{flexDirection:'row', marginTop:5, justifyContent:'center', alignItems:'center', gap:15}}>
+                                  <Button  size="small" variant="outlined"  style={{borderRadius:'30px', gap:10, fontSize:10, borderColor:'gray', color:'gray'}} >
+                                <img src={vector} style={{width:15, height:15}} alt="google"/>  Continue with Google
+                                </Button>
+              
+                                      <Button  size="small" variant="outlined"  style={{borderRadius:'30px', gap:10, fontSize:10, borderColor:'gray', color:'gray'}} >
+                                        <AppleIcon  style={{width:15, height:15}}/>  Continue with Apple
+                                </Button>
+              
+                                  </Stack>
+                              
+                            </Grid>
+            
             </Grid>
           </form>
-        )}
+       
       </Formik>
     </>
   );

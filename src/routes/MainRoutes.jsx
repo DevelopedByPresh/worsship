@@ -8,9 +8,18 @@ import DashboardLayout from 'layout/Dashboard';
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard/default')));
 
 // render - color
-const Color = Loadable(lazy(() => import('pages/component-overview/color')));
-const Typography = Loadable(lazy(() => import('pages/component-overview/typography')));
-const Shadow = Loadable(lazy(() => import('pages/component-overview/shadows')));
+const ChurchSettings = Loadable(lazy(() => import('pages/component-overview/ChurchSettings')));
+const TeamMember = Loadable(lazy(() => import('pages/component-overview/TeamMember')));
+const Verification = Loadable(lazy(() => import('pages/component-overview/Verification')));
+const AllStreams = Loadable(lazy(() => import('pages/component-overview/AllStreams')));
+const Events = Loadable(lazy(() => import('pages/component-overview/Events')));
+const Donations = Loadable(lazy(() => import('pages/component-overview/Donations')));
+const Settings = Loadable(lazy(() => import('pages/component-overview/Settings')));
+
+const BibleStudy = Loadable(lazy(() => import('pages/component-overview/BibleStudy')));
+const Community = Loadable(lazy(() => import('pages/component-overview/Community')));
+const Requests = Loadable(lazy(() => import('pages/component-overview/Requests')));
+
 
 // render - sample page
 const SamplePage = Loadable(lazy(() => import('pages/extra-pages/sample-page')));
@@ -18,38 +27,100 @@ const SamplePage = Loadable(lazy(() => import('pages/extra-pages/sample-page')))
 // ==============================|| MAIN ROUTING ||============================== //
 
 const MainRoutes = {
-  path: '/',
+  path: '/dashboard',
   element: <DashboardLayout />,
+
+
+
+
   children: [
     {
-      path: '/',
+      path: '/dashboard/home',
       element: <DashboardDefault />
     },
     {
-      path: 'dashboard',
+      path: '/dashboard/home',
       children: [
         {
-          path: 'default',
+          path: '/dashboard/home',
           element: <DashboardDefault />
         }
       ]
     },
     {
-      path: 'typography',
-      element: <Typography />
+      path: 'dashboard/TeamMember',
+      element: <TeamMember />
     },
     {
-      path: 'color',
-      element: <Color />
+      path: 'dashboard/ChurchSettings',
+      element: <ChurchSettings />
     },
     {
-      path: 'shadow',
-      element: <Shadow />
+      path: 'dashboard/Verification',
+      element: <Verification />
+    },
+
+
+
+     {
+      path: 'dashboard/Settings',
+      element: <Settings />
     },
     {
       path: 'sample-page',
       element: <SamplePage />
-    }
+    },
+
+    {
+      path: 'dashboard/AllStreams',
+      element: <AllStreams />
+    },
+
+    
+    {
+      path: 'dashboard/Events',
+      element: <Events />
+    },
+
+
+
+    
+    
+    {
+      path: 'dashboard/Donations',
+      element: <Donations />
+    },
+
+
+
+     {
+      path: 'dashboard/BibleStudy',
+      element: <BibleStudy />
+    },
+
+
+     {
+      path: 'dashboard/Community',
+      element: <Community />
+    },
+
+
+
+      {
+      path: 'dashboard/Requests',
+      element: <Requests />
+    },
+
+
+
+
+
+
+
+
+
+
+
   ]
 };
 
