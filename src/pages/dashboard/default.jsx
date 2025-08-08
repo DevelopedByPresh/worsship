@@ -40,7 +40,7 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import MarkUnreadChatAltIcon from '@mui/icons-material/MarkUnreadChatAlt';
-import image from "./avatar.png"
+import image from "./Avatar.png"
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
 
@@ -653,7 +653,7 @@ export default function DashboardDefault() {
             <Stack >
 
 
-              <Stack style={{ flexDirection: 'row', gap: 4, alignItems: 'center', gap: 13 }}>
+              <Stack style={{ flexDirection: 'row', gap: 13, alignItems: 'center', }}>
                 <img src={Rect1} style={{ width: 5, height: 60 }} />
                 <Stack >
 
@@ -666,7 +666,7 @@ export default function DashboardDefault() {
 
 
 
-              <Stack style={{ flexDirection: 'row', gap: 4, marginTop: 30, alignItems: 'center', gap: 13 }}>
+              <Stack style={{ flexDirection: 'row', gap: 13, marginTop: 30, alignItems: 'center',  }}>
                 <img src={Rect2} style={{ width: 5, height: 60 }} />
                 <Stack >
 
@@ -681,7 +681,7 @@ export default function DashboardDefault() {
 
 
 
-              <Stack style={{ flexDirection: 'row', gap: 4, marginTop: 35, alignItems: 'center', gap: 13 }}>
+              <Stack style={{ flexDirection: 'row', gap: 13, marginTop: 35, alignItems: 'center',  }}>
                 <img src={Rect3} style={{ width: 5, height: 60 }} />
                 <Stack >
 
