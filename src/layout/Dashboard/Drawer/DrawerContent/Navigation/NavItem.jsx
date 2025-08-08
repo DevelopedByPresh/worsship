@@ -41,7 +41,7 @@ export default function NavItem({ item, level, isParents = false, setSelectedID 
   const itemIcon = item.icon ? (
     <Icon
       style={{
-        fontSize: drawerOpen ? '1rem' : '1.7rem',
+        fontSize: drawerOpen ? '1.7rem' : '1.9rem', 
         ...(isParents && { fontSize: 20, stroke: '1.5' })
       }}
     />
@@ -50,7 +50,7 @@ export default function NavItem({ item, level, isParents = false, setSelectedID 
   );
 
   const { pathname } = useLocation();
-  const isSelected = !!matchPath({ path: item?.link ? item.link : item.url, end: false }, pathname);
+  const isSelected = !!matchPath({ path: item?.link ? item.link : item.url, end: false, }, pathname);
 
   const textColor = 'text.primary';
   const iconSelectedColor = 'primary.main';
@@ -69,7 +69,7 @@ export default function NavItem({ item, level, isParents = false, setSelectedID 
             pl: drawerOpen ? `${level * 28}px` : 1.5,
             py: !drawerOpen && level === 1 ? 1.25 : 1.7,
             ...(drawerOpen && {
-              '&:hover': {  bgcolor: '#2B04DB',  },
+              '&:hover': {  bgcolor: '#AAA7FF', color:'white'  },
               '&.Mui-selected': {
                 bgcolor: '#2B04DB',
                 ...theme.applyStyles('white', { bgcolor: '#2B04DB' }),
@@ -121,7 +121,7 @@ export default function NavItem({ item, level, isParents = false, setSelectedID 
           (
             <ListItemText
               primary={
-                <Typography variant="h5" sx={{ color: isSelected ? 'white' : 'gray',  }}>
+                <Typography variant="h4" sx={{ color: isSelected ? 'white' : 'gray',  }}>
                   {item.title}
                 </Typography>
               }

@@ -1,3 +1,6 @@
+
+import { useState } from 'react'
+
 // material-ui
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
@@ -45,6 +48,17 @@ import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import MessageIcon from '@mui/icons-material/Message';
 import QuizIcon from '@mui/icons-material/Quiz';
 
+import MenuItem from '@mui/material/MenuItem';
+import TextField from '@mui/material/TextField'
+
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+
+import group from "./Group.png"
+import Rect1 from "./Rect1.png"
+import Rect2 from "./Rect2.png"
+import Rect3 from "./Rect3.png"
+import EastIcon from '@mui/icons-material/East';
+
 
 
 
@@ -67,18 +81,45 @@ const actionSX = {
   transform: 'none'
 };
 
+
+
+
+
+const status = [
+  {
+    value: 'Last Month',
+    label: 'Last Month'
+  },
+  {
+    value: 'This Month',
+    label: 'This Month'
+  },
+
+];
+
+
 // ==============================|| DASHBOARD - DEFAULT ||============================== //
 
 export default function DashboardDefault() {
 
 
+  const [value, setValue] = useState('This Month');
 
 
-        useEffect(() => {
-      
-        document.body.style.zoom = '44%'; 
 
-      }, [])
+
+  useEffect(() => {
+
+
+
+    if (window.innerWidth <= 768) {
+      document.body.style.zoom = '55%';
+    } else {
+      document.body.style.zoom = '44%';
+
+    }
+
+  }, [window])
 
 
 
@@ -91,28 +132,28 @@ export default function DashboardDefault() {
   return (
     <Grid container rowSpacing={4.5} columnSpacing={2.75}>
       {/* row 1 */}
-       <Grid sx={{ mb: -2.25 }} size={12}>
+      <Grid sx={{ mb: -2.25 }} size={12}>
         <Typography variant="h4">Hi, Pastor Grace</Typography>
       </Grid>
       <Grid sx={{ mb: -2.25 }} size={12}>
         <Typography variant="h1">Welcome To Worsship!</Typography>
       </Grid>
       <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2, }} >
-        <AnalyticEcommerce title="Requests" count="15"  extra="35,000" />
+        <AnalyticEcommerce title="Requests" count="15" extra="35,000" />
       </Grid>
       <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
-        <AnalyticEcommerce title="New Members" count="21" percentage={70.5} extra="8,900" Icon={<GroupIcon sx={{width:40, height:40}}/>} />
+        <AnalyticEcommerce title="New Members" count="21" percentage={70.5} extra="8,900" Icon={<GroupIcon sx={{ width: 40, height: 40 }} />} />
       </Grid>
 
-         <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
-   <AnalyticEcommerce title="Donations" count="$78,250" percentage={70.5} extra="8,900"  Icon={<BarChartIcon sx={{width:40, height:40}} />} />
+      <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
+        <AnalyticEcommerce title="Donations" count="$78,250" percentage={70.5} extra="8,900" Icon={<BarChartIcon sx={{ width: 40, height: 40 }} />} />
       </Grid>
 
-       <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2 }} >
+      <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2 }} >
         <AnalyticEcommerce title="Sermons" count="54" percentage={70.5} extra="8,900" />
-         </Grid>
+      </Grid>
 
-         
+
       <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
         <AnalyticEcommerce title="Total Events" count="18" percentage={27.4} isLoss color="warning" extra="1,943" />
       </Grid>
@@ -133,10 +174,10 @@ export default function DashboardDefault() {
         </Grid>
 
 
-        <MainCard sx={{ mt: 2 , pd:20,  margin:'0px auto'}}>
+        <MainCard sx={{ mt: 2, pd: 20, margin: '0px auto' }}>
 
-          <Box sx={{ p: 3, pb: 0,  }}>
-            <Stack sx={{ gap: 2 , display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
+          <Box sx={{ p: 3, pb: 0, }}>
+            <Stack sx={{ gap: 2, display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
               <Typography variant="h3" color="#2C2C31">
                 Quick Actions
               </Typography>
@@ -144,114 +185,114 @@ export default function DashboardDefault() {
             </Stack>
           </Box>
 
-    <Stack sx={{ gap: 2 , mt:5, mb:10, justifyContent:'center', alignItems:'center'}}>
+          <Stack sx={{ gap: 2, mt: 5, mb: 10, justifyContent: 'center', alignItems: 'center' }}>
 
 
 
-         
-         <MainCard contentSX={{ pl: 4.25,pt:3, pr:2.25 }} sx={{   background:  'linear-gradient(to  bottom, #FF6773, #FE8B6E)',  width:'600px', borderRadius:'30px', height:'160px', cursor:'pointer', boxShadow: "1px 1px 1px rgba(0, 0, 0, 0.1)" }}>
-     
-     <Stack style={{display:'flex', justifyContent:'space-between', flexDirection:'row', alignItems:'center', padding:'0px 20px'}}>
 
-      <Stack sx={{ gap: 0.5 }}>
-        <Typography variant="h2" color='#FFFFFF'>
-          LiveStream
-        </Typography>
-        <Grid container alignItems="center">
-          <Grid>
-            <Typography variant="h5" color='#E5E5FF'>
-            Plan your next live worsship
-            </Typography>
-          </Grid>
-       
-        </Grid>
-      </Stack>
+            <MainCard contentSX={{ pl: 4.25, pt: 3, pr: 2.25 }} sx={{ background: 'linear-gradient(to  bottom, #FF6773, #FE8B6E)', width: '600px', borderRadius: '30px', height: '160px', cursor: 'pointer', boxShadow: "1px 1px 1px rgba(0, 0, 0, 0.1)" }}>
 
-              <Stack sx={{color:'white'}} >
-                <MoreHorizIcon  sx={{ width: 40, height: 40,  }} />
+              <Stack style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center', padding: '0px 20px' }}>
 
-                <Stack sx={{ gap: 0.5, color: '#2B04DB', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: 'linear-gradient(to  bottom, #F1F2FF, #F1F2FF)' }}>
-                  <img src={image}  sx={{ width: 40, height: 40 }} alt='worsship' />
+                <Stack sx={{ gap: 0.5 }}>
+                  <Typography variant="h2" color='#FFFFFF'>
+                    LiveStream
+                  </Typography>
+                  <Grid container alignItems="center">
+                    <Grid>
+                      <Typography variant="h5" color='#E5E5FF'>
+                        Plan your next live worsship
+                      </Typography>
+                    </Grid>
+
+                  </Grid>
+                </Stack>
+
+                <Stack sx={{ color: 'white' }} >
+                  <MoreHorizIcon sx={{ width: 40, height: 40, }} />
+
+                  <Stack sx={{ gap: 0.5, color: '#2B04DB', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: 'linear-gradient(to  bottom, #F1F2FF, #F1F2FF)' }}>
+                    <img src={image} sx={{ width: 40, height: 40 }} alt='worsship' />
+                  </Stack>
+
                 </Stack>
 
               </Stack>
 
-              </Stack>
 
-    
-    </MainCard>
+            </MainCard>
 
 
 
 
-           
-         <MainCard contentSX={{ pl: 4.25,pt:3, pr:2.25 }} sx={{   background:   'linear-gradient(to  bottom, #7838F4, #2B04DB)',  width:'600px', borderRadius:'30px', height:'160px', cursor:'pointer', boxShadow: "1px 1px 1px rgba(0, 0, 0, 0.1)" }}>
-     
-     <Stack style={{display:'flex', justifyContent:'space-between', flexDirection:'row', alignItems:'center', padding:'0px 20px'}}>
 
-      <Stack sx={{ gap: 0.5 }}>
-        <Typography variant="h2" color='#FFFFFF'>
-             Create Event
-        </Typography>
-        <Grid container alignItems="center">
-          <Grid>
-            <Typography variant="h5" color='#E5E5FF'>
-           Organize your next church event
-            </Typography>
-          </Grid>
-       
-        </Grid>
-      </Stack>
+            <MainCard contentSX={{ pl: 4.25, pt: 3, pr: 2.25 }} sx={{ background: 'linear-gradient(to  bottom, #7838F4, #2B04DB)', width: '600px', borderRadius: '30px', height: '160px', cursor: 'pointer', boxShadow: "1px 1px 1px rgba(0, 0, 0, 0.1)" }}>
 
-              <Stack sx={{color:'white'}} >
-                <MoreHorizIcon  sx={{ width: 40, height: 40,  }} />
+              <Stack style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center', padding: '0px 20px' }}>
 
-                <Stack sx={{ gap: 0.5, color: '#2B04DB', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#F1F2FF',  }}>
-                  <CalendarMonthIcon  sx={{ width: 40, height: 40 }}  />
+                <Stack sx={{ gap: 0.5 }}>
+                  <Typography variant="h2" color='#FFFFFF'>
+                    Create Event
+                  </Typography>
+                  <Grid container alignItems="center">
+                    <Grid>
+                      <Typography variant="h5" color='#E5E5FF'>
+                        Organize your next church event
+                      </Typography>
+                    </Grid>
+
+                  </Grid>
+                </Stack>
+
+                <Stack sx={{ color: 'white' }} >
+                  <MoreHorizIcon sx={{ width: 40, height: 40, }} />
+
+                  <Stack sx={{ gap: 0.5, color: '#2B04DB', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#F1F2FF', }}>
+                    <CalendarMonthIcon sx={{ width: 40, height: 40 }} />
+                  </Stack>
+
                 </Stack>
 
               </Stack>
 
-              </Stack>
 
-    
-    </MainCard>
+            </MainCard>
 
 
 
 
 
-       <MainCard contentSX={{ pl: 4.25,pt:3, pr:2.25 }} sx={{   background:   'linear-gradient(to  bottom, #CC6002, #FFB532)',  width:'600px', borderRadius:'30px', height:'160px', cursor:'pointer', boxShadow: "1px 1px 1px rgba(0, 0, 0, 0.1)" }}>
-     
-     <Stack style={{display:'flex', justifyContent:'space-between', flexDirection:'row', alignItems:'center', padding:'0px 20px'}}>
+            <MainCard contentSX={{ pl: 4.25, pt: 3, pr: 2.25 }} sx={{ background: 'linear-gradient(to  bottom, #CC6002, #FFB532)', width: '600px', borderRadius: '30px', height: '160px', cursor: 'pointer', boxShadow: "1px 1px 1px rgba(0, 0, 0, 0.1)" }}>
 
-      <Stack sx={{ gap: 0.5 }}>
-        <Typography variant="h2" color='#FFFFFF'>
-              Message Church
-        </Typography>
-        <Grid container alignItems="center">
-          <Grid>
-            <Typography variant="h5" color='#E5E5FF'>
-           Inform your congregration
-            </Typography>
-          </Grid>
-       
-        </Grid>
-      </Stack>
+              <Stack style={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center', padding: '0px 20px' }}>
 
-              <Stack sx={{color:'white'}} >
-                <MoreHorizIcon  sx={{ width: 40, height: 40,  }} />
+                <Stack sx={{ gap: 0.5 }}>
+                  <Typography variant="h2" color='#FFFFFF'>
+                    Message Church
+                  </Typography>
+                  <Grid container alignItems="center">
+                    <Grid>
+                      <Typography variant="h5" color='#E5E5FF'>
+                        Inform your congregration
+                      </Typography>
+                    </Grid>
 
-                <Stack sx={{ gap: 0.5, color: '#2B04DB', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#F1F2FF',  }}>
-                  <MarkUnreadChatAltIcon  sx={{ width: 40, height: 40 }}  />
+                  </Grid>
+                </Stack>
+
+                <Stack sx={{ color: 'white' }} >
+                  <MoreHorizIcon sx={{ width: 40, height: 40, }} />
+
+                  <Stack sx={{ gap: 0.5, color: '#2B04DB', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#F1F2FF', }}>
+                    <MarkUnreadChatAltIcon sx={{ width: 40, height: 40 }} />
+                  </Stack>
+
                 </Stack>
 
               </Stack>
 
-              </Stack>
 
-    
-    </MainCard>
+            </MainCard>
 
 
 
@@ -260,17 +301,17 @@ export default function DashboardDefault() {
 
 
 
-    </Stack>
+          </Stack>
 
 
-{/* 
+          {/* 
           <MonthlyBarChart /> */}
         </MainCard>
       </Grid>
       {/* row 3 */}
 
-      
-      
+
+
       <Grid size={{ xs: 12, md: 7, lg: 8 }}>
         <Grid container alignItems="center" justifyContent="space-between">
           <Grid>
@@ -285,7 +326,7 @@ export default function DashboardDefault() {
 
 
 
-        <Grid size={{ xs: 12, md: 5, lg: 4 }}>
+      <Grid size={{ xs: 12, md: 5, lg: 4 }}>
         <Grid container alignItems="center" justifyContent="space-between">
           {/* <Grid>
             <Typography variant="h5">Transaction History</Typography>
@@ -294,12 +335,12 @@ export default function DashboardDefault() {
         </Grid>
         <MainCard sx={{ mt: 2 }} content={false}>
 
-          <Stack style={{flexDirection:'row', justifyContent:'space-between', padding:"15px 20px"}}>
-              <Typography variant='h3' color="black">Notification</Typography>
-              <Typography variant='h4' color='#2B04DB'>View All</Typography>
+          <Stack style={{ flexDirection: 'row', justifyContent: 'space-between', padding: "15px 20px" }}>
+            <Typography variant='h3' color="black">Notification</Typography>
+            <Typography variant='h4' color='#2B04DB'>View All</Typography>
 
           </Stack>
-        
+
           <List
             component="nav"
             sx={{
@@ -315,48 +356,48 @@ export default function DashboardDefault() {
           >
             <ListItem
               component={ListItemButton}
-            //  divider
+              //  divider
               secondaryAction={
                 <Stack sx={{ alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1" noWrap>
-                    <ArrowForwardIosIcon style={{width:30,height:30}}/>
+                    <ArrowForwardIosIcon style={{ width: 30, height: 30 }} />
                   </Typography>
-                 
+
                 </Stack>
               }
             >
               <ListItemAvatar>
-                     <Stack sx={{ gap: 0.5, color: '#FE8B6E', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#FFF1F1',  }}>
-                  <QuizIcon  sx={{ width: 40, height: 40 }}  />
+                <Stack sx={{ gap: 0.5, color: '#FE8B6E', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#FFF1F1', }}>
+                  <QuizIcon sx={{ width: 40, height: 40 }} />
                 </Stack>
-             
+
               </ListItemAvatar>
-              <ListItemText sx={{ml:2}} primary={<Typography variant="h4" >15 New MVPs</Typography>} secondary="View MVPs" />
+              <ListItemText sx={{ ml: 2 }} primary={<Typography variant="h4" >15 New MVPs</Typography>} secondary="View MVPs" />
             </ListItem>
 
 
 
 
 
-             <ListItem
+            <ListItem
               component={ListItemButton}
-            //  divider
+              //  divider
               secondaryAction={
                 <Stack sx={{ alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1" noWrap>
-                    <ArrowForwardIosIcon style={{width:30,height:30}}/>
+                    <ArrowForwardIosIcon style={{ width: 30, height: 30 }} />
                   </Typography>
-                 
+
                 </Stack>
               }
             >
               <ListItemAvatar>
-                     <Stack sx={{ gap: 0.5, color: '#2B04DB', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#F1F2FF',  }}>
-                  <VolunteerActivismIcon  sx={{ width: 40, height: 40 }}  />
+                <Stack sx={{ gap: 0.5, color: '#2B04DB', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#F1F2FF', }}>
+                  <VolunteerActivismIcon sx={{ width: 40, height: 40 }} />
                 </Stack>
-             
+
               </ListItemAvatar>
-              <ListItemText sx={{ml:2}} primary={<Typography variant="h4" >6 New Donations</Typography>} secondary="View Donations" />
+              <ListItemText sx={{ ml: 2 }} primary={<Typography variant="h4" >6 New Donations</Typography>} secondary="View Donations" />
             </ListItem>
 
 
@@ -365,55 +406,55 @@ export default function DashboardDefault() {
 
 
 
-             <ListItem
+            <ListItem
               component={ListItemButton}
-            //  divider
+              //  divider
               secondaryAction={
                 <Stack sx={{ alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1" noWrap>
-                    <ArrowForwardIosIcon style={{width:30,height:30}}/>
+                    <ArrowForwardIosIcon style={{ width: 30, height: 30 }} />
                   </Typography>
-                 
+
                 </Stack>
               }
             >
               <ListItemAvatar>
-                     <Stack sx={{ gap: 0.5, color: '#CC6002', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#FFF9EB',  }}>
-                  <MessageIcon  sx={{ width: 40, height: 40 }}  />
+                <Stack sx={{ gap: 0.5, color: '#CC6002', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#FFF9EB', }}>
+                  <MessageIcon sx={{ width: 40, height: 40 }} />
                 </Stack>
-             
+
               </ListItemAvatar>
-              <ListItemText sx={{ml:2}} primary={<Typography variant="h4" >4 New Request</Typography>} secondary="View Request" />
+              <ListItemText sx={{ ml: 2 }} primary={<Typography variant="h4" >4 New Request</Typography>} secondary="View Request" />
             </ListItem>
 
 
 
 
-             <ListItem
+            <ListItem
               component={ListItemButton}
-            //  divider
+              //  divider
               secondaryAction={
                 <Stack sx={{ alignItems: 'flex-end' }}>
                   <Typography variant="subtitle1" noWrap>
-                    <ArrowForwardIosIcon style={{width:30,height:30}}/>
+                    <ArrowForwardIosIcon style={{ width: 30, height: 30 }} />
                   </Typography>
-                 
+
                 </Stack>
               }
             >
               <ListItemAvatar>
-                     <Stack sx={{ gap: 0.5, color: '#5EC4B3', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#F2FBF9',  }}>
-                  <MessageIcon  sx={{ width: 40, height: 40 }}  />
+                <Stack sx={{ gap: 0.5, color: '#5EC4B3', height: 65, width: 65, alignItems: 'center', justifyContent: 'center', borderRadius: '50%', background: '#F2FBF9', }}>
+                  <MessageIcon sx={{ width: 40, height: 40 }} />
                 </Stack>
-             
+
               </ListItemAvatar>
-              <ListItemText sx={{ml:2}} primary={<Typography variant="h4" >2 Counselling Schedule</Typography>} secondary="View Schedule" />
+              <ListItemText sx={{ ml: 2 }} primary={<Typography variant="h4" >2 Counselling Schedule</Typography>} secondary="View Schedule" />
             </ListItem>
 
 
-          
 
-           
+
+
 
 
           </List>
@@ -450,66 +491,234 @@ export default function DashboardDefault() {
 
 
 
-    
+
       {/* row 4 */}
 
-      
 
 
-        <Grid size={{ xs: 12, md: 3.5, lg: 4 }}>
+
+      <Grid size={{ xs: 12, md: 3.5, lg: 4 }}>
         <Grid container alignItems="center" justifyContent="space-between">
-          {/* <Grid>
-            <Typography variant="h5">Analytics Report</Typography>
-          </Grid> */}
+
           <Grid />
         </Grid>
 
         <MainCard sx={{ mt: 2 }} content={false}>
           <List sx={{ p: 0, '& .MuiListItemButton-root': { py: 2 } }}>
-            <ListItemButton divider>
-              <ListItemText primary="Company Finance Growth" />
-              <Typography variant="h5">+45.14%</Typography>
-            </ListItemButton>
-            <ListItemButton divider>
-              <ListItemText primary="Company Expenses Ratio" />
-              <Typography variant="h5">0.58%</Typography>
-            </ListItemButton>
-            <ListItemButton>
-              <ListItemText primary="Business Risk Cases" />
-              <Typography variant="h5">Low</Typography>
-            </ListItemButton>
+
+            <Stack style={{ flexDirection: 'row', justifyContent: 'space-between', padding: '20px 20px' }}>
+              <Typography variant="h3">Member Activity</Typography>
+
+
+              <Grid>
+                <TextField
+                  id="standard-select-currency"
+                  size="small"
+                  select
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                  sx={{ '& .MuiInputBase-input': { py: 0.75, fontSize: '0.875rem' } }}
+                >
+                  {status.map((option) => (
+                    <MenuItem key={option.value} value={option.value}>
+                      {option.label}
+                    </MenuItem>
+                  ))}
+                </TextField>
+              </Grid>
+
+
+            </Stack>
+
+
+
+
           </List>
-          <ReportAreaChart />
+
+
+          <Stack style={{ flexDirection: 'row', justifyContent: 'space-around',  alignItems: 'center' }}>
+
+
+
+
+
+            <Stack >
+
+
+              <Stack  style={{marginTop:20}}>
+                <Stack style={{ flexDirection: 'row', gap: 4, alignItems: 'center' }}>
+                  <FiberManualRecordIcon style={{ color: '#2B04DB' }} />
+                  <Typography variant='h4'>Active</Typography>
+                </Stack>
+                <Typography variant='h4' sx={{ mt: 1 }}>3000</Typography>
+
+              </Stack>
+
+
+
+
+              <Stack style={{ marginTop: 60 }}>
+                <Stack style={{ flexDirection: 'row', gap: 4, alignItems: 'center' }}>
+                  <FiberManualRecordIcon style={{ color: '#FF6B6B' }} />
+                  <Typography variant='h4'>Inactive</Typography>
+                </Stack>
+                <Typography variant='h4' sx={{ mt: 1,  }}>254</Typography>
+
+              </Stack>
+
+
+
+
+
+              <Stack style={{  marginTop: 90 }}>
+                <Stack style={{ flexDirection: 'row', gap: 4, alignItems: 'center' }}>
+                  <FiberManualRecordIcon style={{ color: '#FFAC20' }} />
+                  <Typography variant='h4'>Total</Typography>
+                </Stack>
+                <Typography variant='h4' sx={{ mt: 1}}>3254</Typography>
+
+              </Stack>
+
+
+
+            </Stack>
+
+
+
+            <Stack >
+              <img src={group} style={{ width: 330, height: 330 }} />
+            </Stack>
+
+          </Stack>
+
+
+
+
+
+          {/* <ReportAreaChart /> */}
         </MainCard>
       </Grid>
 
 
-        <Grid size={{ xs: 12, md: 3.5, lg: 4 }}>
+
+
+
+
+
+      <Grid size={{ xs: 12, md: 3.5, lg: 4 }}>
         <Grid container alignItems="center" justifyContent="space-between">
-          {/* <Grid>
-            <Typography variant="h5">Analytics Report</Typography>
-          </Grid> */}
+
           <Grid />
         </Grid>
-        
+
         <MainCard sx={{ mt: 2 }} content={false}>
           <List sx={{ p: 0, '& .MuiListItemButton-root': { py: 2 } }}>
-            <ListItemButton divider>
-              <ListItemText primary="Company Finance Growth" />
-              <Typography variant="h5">+45.14%</Typography>
-            </ListItemButton>
-            <ListItemButton divider>
-              <ListItemText primary="Company Expenses Ratio" />
-              <Typography variant="h5">0.58%</Typography>
-            </ListItemButton>
-            <ListItemButton>
-              <ListItemText primary="Business Risk Cases" />
-              <Typography variant="h5">Low</Typography>
-            </ListItemButton>
+
+            <Stack style={{ flexDirection: 'row', justifyContent: 'space-between', padding: '20px 20px' }}>
+              <Typography variant="h3">27 Sept</Typography>
+
+
+              <Grid>
+                <TextField
+                  id="standard-select-currency"
+                  size="small"
+                  select
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                  sx={{ '& .MuiInputBase-input': { py: 0.75, fontSize: '0.875rem' } }}
+                >
+                  {status.map((option) => (
+                    <MenuItem key={option.value} value={option.value}>
+                      {option.label}
+                    </MenuItem>
+                  ))}
+                </TextField>
+              </Grid>
+
+
+            </Stack>
+
+
+
+
           </List>
-          <ReportAreaChart />
+
+
+          <Stack style={{ padding: '10px 30px', }}>
+
+
+
+
+
+            <Stack >
+
+
+              <Stack style={{ flexDirection: 'row', gap: 4, alignItems: 'center', gap: 13 }}>
+                <img src={Rect1} style={{ width: 5, height: 60 }} />
+                <Stack >
+
+                  <Typography variant='h3'>Midday Confession</Typography>
+                  <Typography variant='h4' sx={{ mt: 1, ml: 1, color: '#B1B8C8' }}>12:00 PM - 01`:00 PM</Typography>
+                </Stack>
+
+              </Stack>
+
+
+
+
+              <Stack style={{ flexDirection: 'row', gap: 4, marginTop: 30, alignItems: 'center', gap: 13 }}>
+                <img src={Rect2} style={{ width: 5, height: 60 }} />
+                <Stack >
+
+                  <Typography variant='h3'>Word Study Meeting</Typography>
+                  <Typography variant='h4' sx={{ mt: 1, ml: 1, color: '#B1B8C8' }}>02:00 PM - 03:00 PM</Typography>
+                </Stack>
+
+              </Stack>
+
+
+
+
+
+
+              <Stack style={{ flexDirection: 'row', gap: 4, marginTop: 35, alignItems: 'center', gap: 13 }}>
+                <img src={Rect3} style={{ width: 5, height: 60 }} />
+                <Stack >
+
+                  <Typography variant='h3'>Weekly Leaders Connect</Typography>
+                  <Typography variant='h4' sx={{ mt: 1, ml: 1, color: '#B1B8C8' }}>05:00 PM - 06:00 PM</Typography>
+                </Stack>
+
+              </Stack>
+
+
+
+            </Stack>
+
+
+            <Stack style={{ flexDirection: 'row', cursor: 'pointer', marginBottom: 20, marginTop: 20, justifyContent: 'flex-end', alignItems: 'center', gap: 20, color: '#2B04DB' }}>
+              <Typography variant='h3'>View all upcoming Events</Typography>
+              <EastIcon />
+
+            </Stack>
+
+
+
+
+
+
+          </Stack>
+
+
+
+
+
+          {/* <ReportAreaChart /> */}
         </MainCard>
       </Grid>
+
+
+
 
 
 
@@ -518,7 +727,7 @@ export default function DashboardDefault() {
         <SaleReportCard />
       </Grid>
 
-{/* 
+      {/* 
 <Stack style={{flexDirection:'row', justifyContent:'center', gap:10}}>
 
 
@@ -580,7 +789,7 @@ export default function DashboardDefault() {
 
       </Stack> */}
 
-   
+
 
     </Grid>
   );

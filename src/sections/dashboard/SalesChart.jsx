@@ -73,7 +73,7 @@ export default function SalesChart() {
                     sx={{ '&.Mui-checked': { color: primaryColor } }}
                   />
                 }
-                label="Cost of Sales"
+                label="Expenses"
               />
             </Stack>
           </FormGroup>

@@ -22,16 +22,16 @@ function createData(tracking_no, name, fat, carbs, protein) {
 }
 
 const rows = [
-  createData(84564564, 'Camera Lens', 40, 2, 40570),
-  createData(98764564, 'Laptop', 300, 0, 180139),
-  createData(98756325, 'Mobile', 355, 1, 90989),
-  createData(98652366, 'Handset', 50, 1, 10239),
-  createData(13286564, 'Computer Accessories', 100, 1, 83348),
-  createData(86739658, 'TV', 99, 0, 410780),
-  createData(13256498, 'Keyboard', 125, 2, 70999),
-  createData(98753263, 'Mouse', 89, 2, 10570),
-  createData(98753275, 'Desktop', 185, 1, 98063),
-  createData(98753291, 'Chair', 100, 0, 14001)
+  createData(84564564, 'Mr Ken', 40, 2, 40570),
+  createData(98764564, 'Pastor Godson', 300, 0, 180139),
+  createData(98756325, 'Segun Alabi', 355, 1, 90989),
+  createData(98652366, 'Elvis Pamela', 50, 1, 10239),
+  createData(13286564, 'Okoro Stephen', 100, 1, 83348),
+  createData(86739658, 'Ijeoma Idika', 99, 0, 410780),
+  createData(13256498, 'John Mikel Obi', 125, 2, 70999),
+  createData(98753263, 'Henry Moses Simon', 89, 2, 10570),
+  createData(98753275, 'Jude Emelano', 185, 1, 98063),
+  createData(98753291, 'Nkiru Precious Okere', 100, 0, 14001)
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -71,13 +71,13 @@ const headCells = [
     id: 'name',
     align: 'left',
     disablePadding: true,
-    label: 'Product Name'
+    label: 'Name of Donor'
   },
   {
     id: 'fat',
     align: 'right',
     disablePadding: false,
-    label: 'Total Order'
+    label: 'Amount ($)'
   },
   {
     id: 'carbs',
@@ -90,7 +90,7 @@ const headCells = [
     id: 'protein',
     align: 'right',
     disablePadding: false,
-    label: 'Total Amount'
+    label: 'Amount'
   }
 ];
 

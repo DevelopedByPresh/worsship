@@ -15,6 +15,8 @@ import IconButton from 'components/@extended/IconButton';
 import Transitions from 'components/@extended/Transitions';
 import SearchIcon from '@mui/icons-material/Search';
 
+import image from "./bg.png"
+
 // assets
 import MoreOutlined from '@ant-design/icons/MoreOutlined';
 
@@ -47,11 +49,11 @@ export default function MobileSection() {
 
   return (
     <>
-      <Box sx={{ flexShrink: 0, ml: 0.75 }}>
+      <Box sx={{ flexShrink: 9, ml: 0.75 }}>
         <IconButton
           sx={(theme) => ({
-            color: 'text.primary',
-            bgcolor: open ? 'grey.300' : 'grey.100',
+            mr:3,
+            ml:2,
             ...theme.applyStyles('dark', { bgcolor: open ? 'grey.200' : 'background.default' })
           })}
           aria-label="open more menu"
@@ -59,10 +61,11 @@ export default function MobileSection() {
           aria-controls={open ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
           onClick={handleToggle}
-          color="secondary"
-          variant="light"
+         // color="blue"
+        //  variant="light"
         >
-          <MoreOutlined />
+          <img src={image} style={{width:40, height:40}}/>
+          {/* <MoreOutlined /> */}
         </IconButton>
       </Box>
       <Popper
@@ -90,8 +93,9 @@ export default function MobileSection() {
               <ClickAwayListener onClickAway={handleClose}>
                 <AppBar color="inherit">
                   <Toolbar>
+                     <Profile />
                     <Search />
-                    <Profile />
+                   
                   </Toolbar>
                 </AppBar>
               </ClickAwayListener>

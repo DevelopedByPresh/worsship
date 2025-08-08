@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 
 // material-ui
 import Button from '@mui/material/Button';
@@ -41,6 +41,7 @@ import AppleIcon from '@mui/icons-material/Apple';
 // ============================|| JWT - REGISTER ||============================ //
 
 export default function AuthRegister() {
+  const navigate = useNavigate()
   const [level, setLevel] = useState();
   const [showPassword, setShowPassword] = useState(false);
     const [checked, setChecked] = useState(false);
@@ -60,6 +61,11 @@ export default function AuthRegister() {
   useEffect(() => {
     changePassword('');
   }, []);
+
+
+  const  Go = ()=>{
+    navigate('CreatePassword')
+  }
 
 
 
@@ -155,7 +161,7 @@ export default function AuthRegister() {
            
               <Grid size={12}>
                 <AnimateButton>
-                  <Button fullWidth size="large" variant="contained"  style={{backgroundColor:'#2B04DB', borderRadius:'30px'}}>
+                  <Button fullWidth size="large" variant="contained"  style={{backgroundColor:'#2B04DB', borderRadius:'30px'}} onClick={Go}>
                     Create Account
                   </Button>
                 </AnimateButton>

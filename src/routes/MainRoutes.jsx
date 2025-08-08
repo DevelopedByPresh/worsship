@@ -48,37 +48,37 @@ const MainRoutes = {
       ]
     },
     {
-      path: 'dashboard/TeamMember',
+      path: 'TeamMember',
       element: <TeamMember />
     },
     {
-      path: 'dashboard/ChurchSettings',
+      path: 'ChurchSettings',
       element: <ChurchSettings />
     },
     {
-      path: 'dashboard/Verification',
+      path: 'Verification',
       element: <Verification />
     },
 
 
 
      {
-      path: 'dashboard/Settings',
+      path: 'Settings',
       element: <Settings />
     },
-    {
-      path: 'sample-page',
-      element: <SamplePage />
-    },
+    // {
+    //   path: 'sample-page',
+    //   element: <SamplePage />
+    // },
 
     {
-      path: 'dashboard/AllStreams',
+      path: 'AllStreams',
       element: <AllStreams />
     },
 
     
     {
-      path: 'dashboard/Events',
+      path: 'Events',
       element: <Events />
     },
 
@@ -87,27 +87,27 @@ const MainRoutes = {
     
     
     {
-      path: 'dashboard/Donations',
+      path: 'Donations',
       element: <Donations />
     },
 
 
 
      {
-      path: 'dashboard/BibleStudy',
+      path: 'BibleStudy',
       element: <BibleStudy />
     },
 
 
      {
-      path: 'dashboard/Community',
+      path: 'Community',
       element: <Community />
     },
 
 
 
       {
-      path: 'dashboard/Requests',
+      path: 'Requests',
       element: <Requests />
     },
 

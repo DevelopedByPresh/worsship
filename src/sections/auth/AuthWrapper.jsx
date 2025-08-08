@@ -27,9 +27,6 @@ export default function AuthWrapper({ children }) {
         <Grid size={12}>
 
     
-
-
-
           <Grid
             container
              // boxShadow
@@ -39,24 +36,12 @@ export default function AuthWrapper({ children }) {
             >
 
 
-              
-
-              {/* <Stack sx={{}}>
-                   <img src={image} alt="" style={{height:'90vh'}}  />
-                </Stack> */}
-
        
               <AuthCard>
                     {children}
               </AuthCard>
            
            
-
-
-
-
-
-
 
           </Grid>
 

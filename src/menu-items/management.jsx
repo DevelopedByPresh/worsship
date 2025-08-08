@@ -1,22 +1,11 @@
 // assets
-import {
-  AppstoreAddOutlined,
-  AntDesignOutlined,
-  BarcodeOutlined,
-  BgColorsOutlined,
-  FontSizeOutlined,
-  LoadingOutlined
-} from '@ant-design/icons';
 
-// icons
-const icons = {
-  FontSizeOutlined,
-  BgColorsOutlined,
-  BarcodeOutlined,
-  AntDesignOutlined,
-  LoadingOutlined,
-  AppstoreAddOutlined
-};
+import Diversity3Icon from '@mui/icons-material/Diversity3';
+import ChurchIcon from '@mui/icons-material/Church';
+
+import SettingsIcon from '@mui/icons-material/Settings';
+
+
 
 
 
@@ -29,30 +18,30 @@ const Managemnt = {
       id: 'Team-Members',
       title: 'Team Members',
       type: 'item',
-      url: 'dashboard/TeamMember',
-      icon: icons.FontSizeOutlined
+      url: 'TeamMember',
+      icon: Diversity3Icon
     },
     {
       id: 'Church-Settings',
       title: 'Church Settings',
       type: 'item',
-      url: 'dashboard/ChurchSettings',
-      icon: icons.BgColorsOutlined
+      url: 'ChurchSettings',
+      icon: ChurchIcon
     },
     {
       id: 'Verification',
       title: 'Verification',
       type: 'item',
-      url: 'dashboard/Verification',
-      icon: icons.BarcodeOutlined
+      url: 'Verification',
+      icon: ChurchIcon
      },
 
        {
       id: 'Setting',
       title: 'Setting',
       type: 'item',
-      url: 'dashboard/Settings',
-      icon: icons.BgColorsOutlined
+      url: 'Settings',
+      icon: SettingsIcon
     },
   ]
 };
