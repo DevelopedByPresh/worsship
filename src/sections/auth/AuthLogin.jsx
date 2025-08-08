@@ -123,7 +123,7 @@ export default function AuthLogin({ isDemo = false }) {
                                   Log in
                                 </Button>
                               </AnimateButton>
-                                  <Stack sx={{ mt:2,alignItems: 'baseline', alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
+                                  <Stack sx={{ mt:2, alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
               
                                 <Typography variant='h6' color='#7D7F81' >or</Typography>
                                 </Stack>  

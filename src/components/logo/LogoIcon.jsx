@@ -1,6 +1,6 @@
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import image from "./avatar.png"
+import image from "./Avatar.png"
 import image2 from "./logos.png"
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
