@@ -143,6 +143,7 @@ export default function AuthStep4() {
                 {options.map((item) => (
 
                     <Card
+                    key={item.id}
                         variant="outlined"
                         onClick={() => handleClick(item.id)}
 

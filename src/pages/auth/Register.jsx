@@ -59,7 +59,7 @@ export default function Register() {
       <Grid container spacing={2}>
         {option === 'signUp' &&
         <Grid size={12}>
-          <Stack sx={{ alignItems: 'baseline', alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
+          <Stack sx={{  alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
             <Typography variant="h4" color='black' fontWeight={900}>Create My Account!</Typography>
             <Typography variant="h6" color='#747583' fontSize={12} fontWeight={100} sx={{mt:2}}>To begin this Worsship journey, tell us what your <br/> platform is about.</Typography>
           </Stack>
@@ -68,7 +68,7 @@ export default function Register() {
 
          {option === 'login' &&
         <Grid size={12}>
-          <Stack sx={{ alignItems: 'baseline', alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
+          <Stack sx={{  alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
             <Typography variant="h4" color='black' fontWeight={900}>Welcome Back!</Typography>
             <Typography variant="h6" color='#747583' fontSize={12} fontWeight={100} sx={{mt:2}}>Good to see you again. Let’s continue equipping your <br/> church to reach more souls, one service at a time.</Typography>
           </Stack>

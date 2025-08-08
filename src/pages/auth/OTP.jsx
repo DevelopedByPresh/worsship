@@ -50,7 +50,7 @@ export default function OTP() {
 
      
         <Grid size={12}>
-          <Stack sx={{ alignItems: 'baseline', alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
+          <Stack sx={{  alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
             <Typography variant="h4" color='#191E24' fontWeight='900'>Verify Account</Typography>
             <Typography variant="h6" color='#454545' fontSize={12} fontWeight={100} >Enter the 6-digit verification sent to your Email Address.</Typography>
           </Stack>

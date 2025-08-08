@@ -63,7 +63,7 @@ export default function CreatePassword() {
 
      
         <Grid size={12}>
-          <Stack sx={{ alignItems: 'baseline', alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
+          <Stack sx={{  alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
             <Typography variant="h4" color='black' fontWeight={900}>Create your Password</Typography>
             <Typography variant="h6" color='#747583' fontSize={12} fontWeight={100} >Create a Password for your account.</Typography>
           </Stack>

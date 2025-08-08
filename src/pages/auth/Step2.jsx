@@ -44,7 +44,7 @@ export default function Step2() {
       <Grid container spacing={2}>
     
         <Grid size={12}>
-          <Stack sx={{ alignItems: 'baseline', alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
+          <Stack sx={{  alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
             <Typography variant="h4" color='black' style={{ fontWeight:900}} >Primary Contact Details</Typography>
             <Typography variant="h6" color='#747583' fontSize={12} fontWeight={100} sx={{mt:1}}>We’ll use this information to communicate verification <br /> updates and platform features with your leadership team.</Typography>
           </Stack>

@@ -127,6 +127,7 @@ export default function AuthVerifyAccount() {
              {options.map((item)=>(
                 
                  <Card
+                    key={item.id}
           variant="outlined" 
           onClick={()=>handleClick(item.id)}
          

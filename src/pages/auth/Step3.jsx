@@ -44,7 +44,7 @@ export default function Step2() {
       <Grid container spacing={2}>
     
         <Grid size={12}>
-          <Stack sx={{ alignItems: 'baseline', alignItems:'center',  justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
+          <Stack sx={{  alignItems:'center',  justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
             <Typography variant="h4" color='black' style={{ fontWeight:900, marginTop:15}} >Upload Verification Documents</Typography>
             <Typography variant="h6" color='#747583' fontSize={12} fontWeight={100} sx={{mt:1}}>These help speed up verification and add credibility to your <br/> church’s profile. Don’t worry — you can skip and add them later.</Typography>
           </Stack>

@@ -49,7 +49,7 @@ export default function OnBoarding() {
 
      
         <Grid size={12}>
-          <Stack sx={{ alignItems: 'baseline', alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
+          <Stack sx={{ alignItems:'center', justifyContent: 'center', mb: { xs: -0.5, sm: 0.5 } }}>
             <Typography variant="h4" color='black' fontWeight={900}>Join The Worsship Family!</Typography>
             <Typography variant="h6" color='#747583' fontSize={12} fontWeight={100} sx={{mt:2}}>Let’s get started by telling us which kind of faith <br/> platform you’re setting up. </Typography>
           </Stack>
